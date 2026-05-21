@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a table at abcdef. Select guests, date, and preferred time slot for an exquisite Indian fine dining experience.">
+  <title>Book A Table | abcdef</title>
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="topnav" id="myTopnav">
+    <div class="nav-top-row">
+      <div class="logo">abcdef</div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">&#9776;</button>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">HOME</a>
+      <a href="menu.html">MENU</a>
+      <a href="about.html">ABOUT</a>
+      <a href="about.html#contact">CONTACT</a>
+      <a href="book-a-table.html">BOOK A TABLE</a>
+    </div>
+  </nav>
+
+  <!-- ── BOOKING CONTAINER ── -->
+  <div class="booking-section" id="heroSection">
+    <div class="booking-intro">
+      <h1>RESERVE A TABLE</h1>
+      <p>Please select your party size, date, and preferred dining time. We look forward to hosting you at abcdef.</p>
+    </div>
+
+    <form id="bookingForm">
+      <div class="controls-bar">
+        <div class="form-field">
+          <label for="guests">Guests</label>
+          <select id="guests" required>
+            <option value="" disabled selected>Select Party Size</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+            <option value="7">7 Guests</option>
+            <option value="8">8 Guests</option>
+            <option value="9">9 Guests</option>
+            <option value="10">10 Guests</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="book-date">Date</label>
+          <input type="date" id="book-date" required>
+        </div>
+      </div>
+
+      <p class="time-slot-label">Choose an available time slot:</p>
+      <input type="hidden" id="book-time" required>
+      
+      <div class="time-grid">
+        <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
+        <div class="time-slot" data-time="12:30 PM">12:30 PM</div>
+        <div class="time-slot" data-time="1:00 PM">1:00 PM</div>
+        <div class="time-slot" data-time="1:30 PM">1:30 PM</div>
+        <div class="time-slot" data-time="5:00 PM">5:00 PM</div>
+        <div class="time-slot" data-time="5:30 PM">5:30 PM</div>
+        <div class="time-slot" data-time="6:00 PM">6:00 PM</div>
+        <div class="time-slot" data-time="6:30 PM">6:30 PM</div>
+        <div class="time-slot" data-time="7:00 PM">7:00 PM</div>
+        <div class="time-slot" data-time="7:30 PM">7:30 PM</div>
+        <div class="time-slot" data-time="8:00 PM">8:00 PM</div>
+        <div class="time-slot" data-time="8:30 PM">8:30 PM</div>
+        <div class="time-slot" data-time="9:00 PM">9:00 PM</div>
+        <div class="time-slot" data-time="9:30 PM">9:30 PM</div>
+      </div>
+
+      <button type="submit" class="book-btn">BOOK NOW</button>
+    </form>
+  </div>
+
+  <!-- Confirmation popup -->
+  <div class="form-popup" id="confirmPopup">
+    <div class="form-container">
+      <h1>Thank You!</h1>
+      <p id="confirmMessage">Your table reservation is submitted. We will confirm shortly.</p>
+      <button class="btn cancel" id="closePopup">CLOSE</button>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-logo">
+      <svg viewBox="0 0 180 97" xmlns="http://www.w3.org/2000/svg" width="120" height="65">
+        <rect x="10" y="20" width="20" height="50" rx="10" fill="#FAF6EE" opacity="0.8"/>
+        <rect x="40" y="10" width="20" height="70" rx="10" fill="#D97706" opacity="0.8"/>
+        <rect x="70" y="30" width="20" height="50" rx="10" fill="#FAF6EE" opacity="0.9"/>
+        <rect x="100" y="15" width="20" height="60" rx="10" fill="#D97706" opacity="0.8"/>
+        <rect x="130" y="25" width="20" height="50" rx="10" fill="#FAF6EE" opacity="0.8"/>
+        <polygon points="160,48 170,38 180,48 170,58" fill="#FAF6EE"/>
+      </svg>
+    </div>
+    <div class="footer-box">
+      <div class="footer-box1">
+        <p>INDIAN BISTRO &amp; BAR</p>
+        <b>abcdef</b>
+      </div>
+      <div class="footer-box2">
+        abcdef<br>
+        T: abcdef<br>
+        E: hello@abcdef.com<br><br>
+        Mon–Sun: 12:00 PM – 10:30 PM
+      </div>
+      <div class="footer-box3">
+        <a href="index.html">HOME</a>
+        <a href="menu.html">MENU</a>
+        <a href="about.html">ABOUT</a>
+        <a href="about.html#contact">CONTACT</a>
+        <a href="book-a-table.html">BOOK A TABLE</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 abcdef. All rights reserved.</p>
+  </footer>
+
+  <!-- Booking functionality script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Min date validation (prevent booking past dates)
+      var dateInput = document.getElementById('book-date');
+      if (dateInput) {
+        var today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+      }
+
+      // 2. Time slot selection logic
+      var timeSlots = document.querySelectorAll('.time-slot');
+      var hiddenTimeInput = document.getElementById('book-time');
+
+      timeSlots.forEach(function(slot) {
+        slot.addEventListener('click', function() {
+          // Remove selected from other slots
+          timeSlots.forEach(function(s) { s.classList.remove('selected'); });
+          // Add selected to clicked slot
+          slot.classList.add('selected');
+          // Update hidden input value
+          hiddenTimeInput.value = slot.getAttribute('data-time');
+        });
+      });
+
+      // 3. Form Submission & Modal Logic
+      var form = document.getElementById('bookingForm');
+      var popup = document.getElementById('confirmPopup');
+      var closeBtn = document.getElementById('closePopup');
+      var confirmMessage = document.getElementById('confirmMessage');
+
+      if (form && popup && closeBtn) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          var guests = document.getElementById('guests').value;
+          var date = document.getElementById('book-date').value;
+          var time = hiddenTimeInput.value;
+
+          if (!guests || !date || !time) {
+            alert('Please select party size, date, and preferred time slot.');
+            return;
+          }
+
+          // Format confirmation message
+          confirmMessage.innerHTML = 'Your table reservation for <strong>' + guests + ' guest(s)</strong> on <strong>' + date + '</strong> at <strong>' + time + '</strong> has been submitted. We look forward to hosting you!';
+          
+          // Open Modal
+          popup.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', function() {
+          popup.classList.remove('active');
+          // Reset form fields
+          form.reset();
+          timeSlots.forEach(function(s) { s.classList.remove('selected'); });
+          hiddenTimeInput.value = '';
+        });
+
+        // Close popup clicking outside form container
+        popup.addEventListener('click', function(e) {
+          if (e.target === popup) {
+            popup.classList.remove('active');
+            form.reset();
+            timeSlots.forEach(function(s) { s.classList.remove('selected'); });
+            hiddenTimeInput.value = '';
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
