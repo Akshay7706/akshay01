@@ -30,12 +30,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ── 4. Deepen nav shadow on page scroll ──
+  // ── 4. Scroll behavior (shadow & hide on scroll down) ──
+  var lastScrollY = window.scrollY;
   window.addEventListener('scroll', function () {
     if (!nav) return;
+    
+    // Shadow depth
     nav.style.boxShadow = window.scrollY > 10
       ? '0 2px 14px rgba(0,0,0,0.14)'
       : '0 1px 4px rgba(0,0,0,0.08)';
+
+    // Hide/show navbar depending on scroll direction
+    if (!nav.classList.contains('open')) {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        nav.classList.add('nav-hidden');
+      } else {
+        nav.classList.remove('nav-hidden');
+      }
+    }
+    lastScrollY = window.scrollY;
   });
 
   // ── 5. Highlight active navigation link ──
